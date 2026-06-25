@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 mkearth · mk体育 背景与说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f0eb;
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+      color: #3e3a36;
+      line-height: 1.75;
+      padding: 2.4rem 1.5rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fcf9f6;
+      border-radius: 24px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.04);
+      padding: 3rem 2.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.6rem;
+      color: #2d2925;
+      border-left: 4px solid #c7b5a0;
+      padding-left: 1rem;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      color: #7a7168;
+      margin-bottom: 2.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #e5ddd5;
+    }
+
+    .intro-block {
+      margin-bottom: 2.4rem;
+    }
+
+    .intro-block p {
+      margin-bottom: 1.2rem;
+      text-indent: 2em;
+      font-size: 1rem;
+    }
+
+    .inset-box {
+      background: #efe9e2;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+      border-left: 4px solid #b8a48c;
+    }
+
+    .inset-box p {
+      margin-bottom: 0.8rem;
+      text-indent: 0;
+    }
+
+    .inset-box strong {
+      color: #4f443b;
+    }
+
+    .directory-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .dir-card {
+      background: #faf6f1;
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid #e5dbd1;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .dir-card:hover {
+      background: #f2ebe3;
+      border-color: #c7b5a0;
+    }
+
+    .dir-card h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #3d352e;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.01em;
+    }
+
+    .dir-card p {
+      font-size: 0.89rem;
+      color: #6b625a;
+      line-height: 1.6;
+      text-indent: 0;
+    }
+
+    .notice-bar {
+      background: #eae3da;
+      border-radius: 40px;
+      padding: 0.9rem 1.6rem;
+      margin: 1.8rem 0 2.2rem;
+      font-size: 0.92rem;
+      color: #4f443b;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .notice-bar span {
+      font-weight: 500;
+    }
+
+    .faq-summary {
+      margin: 2rem 0 1.2rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px dashed #ddd4cb;
+      padding: 1rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #3a322c;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-a {
+      font-size: 0.94rem;
+      color: #5f5650;
+      text-indent: 0;
+      padding-left: 0.8rem;
+    }
+
+    .link-sentence {
+      background: #f3ede7;
+      padding: 1.2rem 1.8rem;
+      border-radius: 40px;
+      margin: 2rem 0 0.8rem;
+      font-size: 1.02rem;
+      text-align: center;
+      color: #3a322c;
+    }
+
+    .link-sentence a {
+      color: #6f5b4a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #cebfaf;
+      padding-bottom: 1px;
+      transition: border-color 0.15s;
+    }
+
+    .link-sentence a:hover {
+      border-bottom-color: #6f5b4a;
+    }
+
+    .footnote {
+      font-size: 0.82rem;
+      color: #948b82;
+      margin-top: 2.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e5ddd5;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 1.2rem; }
+      .container { padding: 2rem 1.2rem; }
+      .directory-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 1.6rem; }
+      .inset-box { padding: 1.3rem; }
+      .link-sentence { font-size: 0.95rem; }
+    }
+
+    @media (max-width: 440px) {
+      .notice-bar { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>mkearth · 内容索引</h1>
+  <div class="subhead">站点概览 · 方向说明 · 可信参考</div>
+
+  <div class="intro-block">
+    <p>mkearth.com.cn 是一个围绕运动信息与日常训练知识组织起来的站点。这里不追逐热点，也不贩卖速成方案，而是尝试把一些基本信息、常见疑问和背景说明整理成可翻阅的条目。如果你对运动节奏、基础策略或某个项目的前后脉络感兴趣，或许能在这里找到一些平实的梳理。</p>
+    <p>站点的定位更接近一个安静的资料角——内容以叙述和说明为主，不进行过度包装。每一篇都经过核对，但依然建议你结合自身情况判断。运动本身充满变量，没有任何文本可以替代实际的感受与调整。</p>
+  </div>
+
+  <!-- 目录卡片——知识库入口感 -->
+  <div class="directory-grid">
+    <div class="dir-card">
+      <h3>▎运动基础</h3>
+      <p>常见项目的规则演变、场地规格与基础术语。适合刚接触或想厘清基本概念的读者。</p>
+    </div>
+    <div class="dir-card">
+      <h3>▎训练思路</h3>
+      <p>周期安排、负荷控制与恢复逻辑。不提供模板，只讨论原则与常见误区。</p>
+    </div>
+    <div class="dir-card">
+      <h3>▎装备与场地</h3>
+      <p>器材选择的大致方向，以及不同环境下的适应建议。以实用经验为主。</p>
+    </div>
+    <div class="dir-card">
+      <h3>▎常见疑问</h3>
+      <p>从动作疑问到观念辨析，收录被反复问起的话题，并尝试给出克制的回应。</p>
+    </div>
+  </div>
+
+  <!-- 说明区 / 引用块风格 -->
+  <div class="inset-box">
+    <p><strong>关于本页的用意。</strong> 这不是一个导航页或聚合页，而是一个背景说明页。你可以把它看作进入具体内容前的走廊——上面几块卡片指向的是站点内持续更新的几个方向。所有材料都经过整理，但依然保持开放：如果你发现任何不清楚或有出入的地方，欢迎以你自己的方式进一步查证。</p>
+    <p>我们相信可靠的信息来自多方比照和审慎判断，而非单一来源的断言。</p>
+  </div>
+
+  <!-- 提示区 -->
+  <div class="notice-bar">
+    <span>⏺ 提示</span> 本站内容仅供一般性参考，不构成专业指导。运动前请评估自身状况，必要时咨询相关人士。
+  </div>
+
+  <!-- 相关信息区 + 自然链接 -->
+  <div class="link-sentence">
+    如果你对运动信息的整理方式感兴趣，可以看看 <a href="https://mkearth.com.cn">mk体育</a> 里的具体条目，那里有更完整的分类和说明。
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <div class="faq-item">
+      <div class="faq-q">▸ 站点的信息从哪里来？</div>
+      <div class="faq-a">主要来自公开资料、运动手册以及长期参与者的经验总结。每一篇都经过交叉核对，但时间与认知有限，难免存在疏漏，欢迎指正。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 为什么不做成视频或动态内容？</div>
+      <div class="faq-a">文字更适合反复查阅和对比，也更容易保持克制与连贯。我们倾向于提供一种可以安静阅读的格式，减少干扰。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 内容更新频率如何？</div>
+      <div class="faq-a">没有固定周期。当积累了一定量的新素材或发现原有内容需要修正时，就会补充或修订。质量优先于数量。</div>
+    </div>
+  </div>
+
+  <!-- 额外可信说明 -->
+  <p style="margin-top:1.6rem; font-size:0.92rem; color:#6b625a; text-indent:0;">
+    本站不收集用户数据，不放广告，不设付费墙。运作纯粹出于对运动知识本身的兴趣。如果你认同这种平实的方式，欢迎随时回来翻阅。
+  </p>
+
+  <div class="footnote">
+    mkearth.com.cn · 一个安静的运动知识角落
+  </div>
+
+</div>
+</body>
+</html>
