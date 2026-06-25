@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩金网 · 导航介绍页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f3f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* —— 导航 —— */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem 1.5rem;
+            padding: 0.75rem 1.25rem;
+            background: #ffffffcc;
+            backdrop-filter: blur(4px);
+            border: 1px solid #e4e7ed;
+            border-radius: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2.5rem;
+        }
+
+        .nav-brand {
+            font-weight: 580;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            color: #1f2b3c;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5a6e;
+            font-size: 0.95rem;
+            padding: 0.2rem 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1f2b3c;
+            border-bottom-color: #b0c0d0;
+        }
+
+        /* —— hero —— */
+        .hero {
+            background: #ffffff;
+            border: 1px solid #e8eaee;
+            border-radius: 36px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+            padding: 2.8rem 2.5rem;
+            margin-bottom: 2.4rem;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 520;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.6rem;
+            color: #15202b;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #3a4a5c;
+            max-width: 640px;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero .tagline {
+            margin-top: 0.9rem;
+            font-size: 0.98rem;
+            color: #5a6c7e;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+        }
+
+        /* —— 卡片通用 —— */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin-bottom: 2.6rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e4e8ee;
+            border-radius: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            padding: 1.8rem 1.8rem 2rem;
+            flex: 1 1 260px;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .card h3 {
+            font-weight: 520;
+            font-size: 1.2rem;
+            margin-bottom: 0.7rem;
+            color: #1a2838;
+        }
+
+        .card p {
+            color: #3f5266;
+            font-size: 0.95rem;
+        }
+
+        .card p + p {
+            margin-top: 0.7rem;
+        }
+
+        .card .small-note {
+            font-size: 0.85rem;
+            color: #6b7f93;
+            margin-top: 1rem;
+            border-top: 1px solid #edf0f5;
+            padding-top: 0.8rem;
+        }
+
+        /* —— 说明区块（常见说明） —— */
+        .faq-section {
+            background: #ffffff;
+            border: 1px solid #e4e8ee;
+            border-radius: 36px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            padding: 2rem 2.2rem 2.4rem;
+            margin-bottom: 2.4rem;
+        }
+
+        .faq-section h2 {
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #1a2838;
+            margin-bottom: 1.4rem;
+            letter-spacing: 0.2px;
+        }
+
+        .faq-item {
+            margin-bottom: 1.3rem;
+        }
+
+        .faq-item .question {
+            font-weight: 500;
+            color: #1f2f40;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item .answer {
+            color: #43566b;
+            font-size: 0.95rem;
+            padding-left: 0.2rem;
+        }
+
+        .faq-item .answer a {
+            color: #2b4b6f;
+            text-decoration: none;
+            border-bottom: 1px dotted #bcc8d6;
+            transition: border-color 0.15s;
+        }
+
+        .faq-item .answer a:hover {
+            border-bottom-color: #2b4b6f;
+        }
+
+        /* —— 底部 —— */
+        .footer-note {
+            text-align: center;
+            color: #6b7d8f;
+            font-size: 0.9rem;
+            padding: 1.2rem 0 0.4rem;
+            border-top: 1px solid #e3e7ee;
+            margin-top: 0.4rem;
+        }
+
+        .footer-note a {
+            color: #2b4b6f;
+            text-decoration: none;
+            border-bottom: 1px dotted #bcc8d6;
+        }
+
+        .footer-note a:hover {
+            border-bottom-color: #1f2f40;
+        }
+
+        /* —— 响应式 —— */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            nav {
+                border-radius: 28px;
+                padding: 0.6rem 1rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            .card {
+                flex: 1 1 100%;
+            }
+            .faq-section {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 顶部导航 -->
+    <nav>
+        <span class="nav-brand">init·导航</span>
+        <div class="nav-links">
+            <a href="#">介绍</a>
+            <a href="#">场景</a>
+            <a href="#">说明</a>
+        </div>
+    </nav>
+
+    <!-- 核心介绍 -->
+    <section class="hero">
+        <h1>关于彩金网</h1>
+        <p>
+            <a href="https://init-caijin.com" style="color:#1f2b3c; text-decoration: none; border-bottom: 1px solid #b6c5d5;">彩金网</a> 
+            是一个内容聚合与信息导航站点，围绕特定主题提供结构化的浏览入口。站内整合了多种实用模块，方便使用者快速定位自己关注的方向。
+        </p>
+        <div class="tagline">
+            没有复杂的功能堆叠，只做清晰的信息组织。站点的定位更接近「轻量索引」，让每一次浏览都更直接。
+        </div>
+    </section>
+
+    <!-- 三个场景模块（卡片） -->
+    <div class="card-grid">
+        <div class="card">
+            <h3>日常参考</h3>
+            <p>当你需要获取某个领域的概况或最新动态时，<a href="https://init-caijin.com" style="color:#2b4b6f; text-decoration: none; border-bottom: 1px dotted #bcc8d6;">彩金网</a> 的分类索引可以帮助你快速定位相关条目，省去反复搜索的精力。</p>
+            <p class="small-note">场景举例：信息收集、主题浏览</p>
+        </div>
+        <div class="card">
+            <h3>兴趣延伸</h3>
+            <p>站点内包含多个维度的内容块，适合顺着兴趣方向延展阅读。从一条短讯到一篇整理，节奏由自己控制。</p>
+            <p class="small-note">场景举例：闲暇探索、知识补充</p>
+        </div>
+        <div class="card">
+            <h3>轻量查阅</h3>
+            <p>不需要登录或关注，打开即用。界面以简洁为主，重点放在内容本身，减少干扰元素。</p>
+            <p class="small-note">场景举例：快速查阅、日常使用</p>
+        </div>
+    </div>
+
+    <!-- 常见说明（FAQ 摘要） -->
+    <section class="faq-section">
+        <h2>常见说明</h2>
+
+        <div class="faq-item">
+            <div class="question">这个站点提供什么？</div>
+            <div class="answer">
+                <a href="https://init-caijin.com">彩金网</a> 是一个信息索引站，汇聚了多个类别下的整理内容，方便浏览者按需查阅。站点本身不生产原始数据，仅做结构化展示。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">内容可信吗？</div>
+            <div class="answer">
+                站内条目均标注了来源或参考路径，建议根据自身判断进行参考。索引的目的是提供线索，而非替代独立核实。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">是否需要注册或付费？</div>
+            <div class="answer">
+                完全免费，无需注册。所有内容均可直接浏览，不设隐藏限制。
+            </div>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 0;">
+            <div class="question">站点更新频率如何？</div>
+            <div class="answer">
+                内容会按照主题节奏做不定期的整理与补充，没有固定日程，但会保证索引的可用性。
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部嵌入链接（自然句） -->
+    <div class="footer-note">
+        若想进一步了解站点结构，可以直接打开 <a href="https://init-caijin.com">彩金网</a> 浏览。页面内容仅供信息参考。
+    </div>
+
+</div>
+</body>
+</html>
